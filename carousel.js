@@ -1,3 +1,9 @@
+exports.trueRtn = trueRtn
+
+function trueRtn() {
+  return true
+}
+
 let canvas = {}
 let canvasWidth = 0
 let canvasHeight = 0
@@ -5,7 +11,7 @@ let images = []
 let count = 0
 const scale = 0.3
 
-window.onload = function() {
+window.onload = function carousel() {
   canvas = document.getElementById('images')
   canvasWidth = canvas.offsetWidth
   canvasHeight = canvas.offsetHeight
