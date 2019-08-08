@@ -1,5 +1,5 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![Build Status](https://img.shields.io/travis/com/MarcTimperley/carousel)
+![Build Status](https://travis-ci.org/MarcTimperley/carousel.svg?branch=master)
 
 # carousel
 Browse images from a folder in an innovative way by laying them out in a stack and browsing directly to any of them
@@ -72,7 +72,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
