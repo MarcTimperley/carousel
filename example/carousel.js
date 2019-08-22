@@ -1,8 +1,3 @@
-exports.trueRtn = trueRtn
-
-function trueRtn() {
-  return true
-}
 
 let canvas = {}
 let canvasWidth = 0
@@ -12,6 +7,7 @@ let count = 0
 const scale = 0.3
 
 window.onload = function carousel() {
+
   canvas = document.getElementById('images')
   canvasWidth = canvas.offsetWidth
   canvasHeight = canvas.offsetHeight
@@ -19,7 +15,27 @@ window.onload = function carousel() {
   // canvas.style='width:100%;height:100%'
   // const ctx = canvas.getContext('2d')
   // canvas.addEventListener('mousedown', handleMouseDown)
+
+
+
+
+
   const sources = document.getElementById('sources')
+
+// let sourceFolder = fs.readDirSync(path.join(__dirname,'example','Images'))
+// for (let filename of sourceFolder) {
+  // loop folder
+/*
+if(filename.match(/.png/)){
+
+  console.log(filename)
+  let img = document.createElement('img')
+  img.src=filename
+  sources.appendChild(img)
+}
+}
+*/
+
   const sourceImages = [...sources.childNodes]
   for (const image of sourceImages) {
     if (image.nodeName === 'IMG') {
