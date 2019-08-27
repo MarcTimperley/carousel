@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "carousel.js",
+  "repository": "https://gitlab.com/MarcTimperley/carousel/",
   "scripts": {
     "test": "jest",
     "test-coverage": "jest --coverage"
