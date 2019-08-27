@@ -4,7 +4,7 @@ let canvasWidth = 0
 let canvasHeight = 0
 let images = []
 let count = 0
-const scale = 0.3
+const scale = 0.4
 
 window.onload = function carousel() {
 
@@ -12,31 +12,8 @@ window.onload = function carousel() {
   canvasWidth = canvas.offsetWidth
   canvasHeight = canvas.offsetHeight
   console.log(canvasWidth, canvasHeight)
-  // canvas.style='width:100%;height:100%'
-  // const ctx = canvas.getContext('2d')
-  // canvas.addEventListener('mousedown', handleMouseDown)
-
-
-
-
-
   const sources = document.getElementById('sources')
-
-// let sourceFolder = fs.readDirSync(path.join(__dirname,'example','Images'))
-// for (let filename of sourceFolder) {
-  // loop folder
-/*
-if(filename.match(/.png/)){
-
-  console.log(filename)
-  let img = document.createElement('img')
-  img.src=filename
-  sources.appendChild(img)
-}
-}
-*/
-
-  const sourceImages = [...sources.childNodes]
+const sourceImages = [...sources.childNodes]
   for (const image of sourceImages) {
     if (image.nodeName === 'IMG') {
       console.log(`loaded image ${image.alt}`)
@@ -44,13 +21,6 @@ if(filename.match(/.png/)){
     }
   }
   console.log(`all done`)
-  /*
-  const thumbs = [...canvas.childNodes]
-
-  for (let thumb of thumbs) {
-    thumb.addStyle()
-  }
-   */
 }
 
 function positionThumb(image) {
