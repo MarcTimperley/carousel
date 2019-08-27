@@ -1,5 +1,4 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![Build Status](https://travis-ci.org/MarcTimperley/carousel.svg?branch=master)
 
 # carousel
 Browse images from a folder in an innovative way by laying them out in a stack and browsing directly to any of them
