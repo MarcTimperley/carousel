@@ -1,4 +1,5 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![pipeline status](https://gitlab.com/MarcTimperley/carousel/badges/master/pipeline.svg)](https://gitlab.com/MarcTimperley/carousel/commits/master)
 
 # carousel
 Browse images from a folder in an innovative way by laying them out in a stack and browsing directly to any of them
