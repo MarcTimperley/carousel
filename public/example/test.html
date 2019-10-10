@@ -23,8 +23,8 @@
     }
 
     .image-container {
+      position:absolute;
       transition: all 0.2s 0.1s;
-      display: inline-block;
       padding: 10px 10px 10px 10px;
       border: 1px solid #BFBFBF;
       border-radius: 2px;
@@ -40,13 +40,9 @@
     }
 
     .check:checked+.image-container {
-      transform-origin: center;
-      transform: rotate(0deg) scale(2.5) translateX(50%) translateY(50%) !important;
-      position: absolute;
-      top:0;
-      left:0;
-      margin: 50px !important;
-      z-index: 9999 !important;
+      transform:  scale(2)!important;
+
+      z-index: 9999 ;
     }
   </style>
 </head>
@@ -55,9 +51,11 @@
   <div id="sources">
     <img src="./images/prague.jpg" alt="Prague at twilight">
     <img src="./images/angkor.jpg" alt="Angkor Wat, Cambodia">
+    <img src="./images/climber.jpg" alt="Climbing at sunset">
     <img src="./images/railway.jpg" alt="A picturesque railway cutting">
-    <img src="./images/lava.jpg" alt="Run really fast!">
     <img src="./images/forest.jpg" alt="Can't see the wood for the trees?">
+    <img src="./images/lava.jpg" alt="Run really fast!">
+    <img src="./images/marctimperley.png" alt="@author of carousel">
 
     </sources>
 

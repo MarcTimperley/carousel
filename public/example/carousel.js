@@ -3,9 +3,15 @@ let canvasWidth = 0
 let canvasHeight = 0
 let images = []
 let count = 0
+let imageCount = 0
+let columns = 0
+let rows = 0
 const scale = 0.3
+let picSize = 0
 
-window.onload = function carousel() {
+window.onload=carousel()
+
+function carousel() {
 
   canvas = document.getElementById('images')
   canvasWidth = canvas.offsetWidth
@@ -15,8 +21,13 @@ window.onload = function carousel() {
   const sourceImages = [...sources.childNodes]
   for (const image of sourceImages) {
     if (image.nodeName === 'IMG') {
-      console.log(image)
-      console.log(`loaded image ${image.alt}`)
+      imageCount++
+    }
+  }
+  picSize = canvasWidth * canvasHeight / imageCount / 700
+  for (const image of sourceImages) {
+    if (image.nodeName === 'IMG') {
+      console.log(image.src)
       positionThumb(image)
     }
   }
@@ -26,36 +37,40 @@ window.onload = function carousel() {
 function positionThumb(image) {
   let portrait = image.naturalHeight > image.naturalWidth ? true : false
   let imageSize = {
-    width: Math.min(parseInt(Math.floor(canvasWidth * scale)), 280)+'px',
+    width: Math.min(parseInt(Math.floor(canvasWidth * scale)), picSize) + 'px',
     height: 'auto'
   }
   if (portrait) {
     imageSize.width = 'auto'
-    imageSize.height = Math.min(parseInt(Math.floor(canvasWidth * scale)), 280)+'px'
+    imageSize.height = Math.min(parseInt(Math.floor(canvasWidth * scale)), picSize) + 'px'
   }
-  //let imageSize = `width: ${Math.min(parseInt(Math.floor(canvasWidth * scale)), 280)}px; height:auto;`
-  //let containerSize = `width: ${Math.max(parseInt(Math.floor(canvasWidth * scale)), 180)}px;`
-  //if (image.naturalHeight > image.naturalWidth) imageSize = `width:auto; height:px;`
-  // if (image.naturalHeight > image.naturalWidth) containerSize = `width:auto; height:${Math.max(parseInt(Math.floor(canvasWidth * scale)), 180)}px;`
-  const rotation = Math.floor(Math.random() * 50 - 25)
-  const x = Math.floor(Math.random() * canvasWidth / 2)
-  const y = Math.floor(Math.random() * canvasHeight / 2)
-  // center better
+  const rotation = Math.floor(Math.random() * 70 - 35)
+
+let x = Math.floor(Math.max((Math.random() * 50 - 25) + (picSize * columns - 75), 20))
+  if (x + picSize * 2 - canvasWidth > 0) {
+    console.log('resetting row:' + (x + picSize * 2) + ' > ' + canvasWidth)
+    rows++
+    columns = 0
+  } else {
+    columns++
+  }
+   x = Math.floor(Math.max((Math.random() * 50 - 25) + (picSize * columns - 75), 20))
+  let y = Math.floor(Math.max(Math.random() * 50 - 25 + rows * (picSize - 70), 20))
   image.style = 'width:10px; height:10px; top:5px; left:5px; position:absolute;'
   images.push({
     [image.src]: {
       x: x,
       y: y,
-      // size: imageSize,
       rotation: rotation,
       caption: image.alt
     }
   })
   console.log()
-  let html = `<label for="checkbox${count}"><input type="checkbox" id="checkbox${count}" class="check">`
-  html += `<div class="image-container" style="transform: rotate(${rotation}deg) scale(1); ">`
-  html += `<img src="${image.src}" alt="${image.alt}" class="thumbnail" id=${count} style="width:${imageSize.width};height:${imageSize.height}">`
-  html += `<p class="caption" style="max-width:200px;">${image.alt}</p>`
+  console.log(x, y)
+  let html = `<label for="checkbox${count}"><input type="checkbox" id="checkbox${count}" style=" left:${x}; top:${y};" class="check">`
+  html += `<div class="image-container" style="transform: rotate(${rotation}deg) scale(1); left:${x}px; top:${y}px;">`
+  html += `<img src="${image.src}" alt="${image.alt}" class="thumbnail" id=${count} style="width:${imageSize.width};height:${imageSize.height};">`
+  html += `<p class="caption" style="width:${picSize};">${image.alt}</p>`
   html += `</div>`
   html += `</label>`
   canvas.innerHTML += html
