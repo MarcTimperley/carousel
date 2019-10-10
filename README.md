@@ -6,7 +6,7 @@
 Browse images from a folder in an innovative way by laying them out in a stack and browsing directly to any of them
 
 # Demo
-A demonstration of the application can be found [here](https://marctimperley.gitlab.io/carousel/example/test.html)
+A demonstration of the application can be found [here](https://marctimperley.gitlab.io/carousel/example/test.html). This is configured using a GitLab pipeline on commit to serve to the GitLab pages.
 
 
 ## Getting Started
@@ -89,4 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
   * Volcano: Image by <a href="https://pixabay.com/users/Free-Photos-242387/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=691939">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=691939">Pixabay</a>
   * Prague: Image by <a href="https://pixabay.com/users/Julius_Silver-4371822/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3010407">Julius Silver</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3010407">Pixabay</a>
   * Railway cutting: Image by <a href="https://pixabay.com/users/Free-Photos-242387/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=691863">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=691863">Pixabay</a>
-  * Angkor Wat: Image by <a href="https://pixabay.com/users/SuzyT-1586400/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1017243">Sue Todd</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1017243">Pixabay</a>
+  * Angkor Wat: My own photo
