@@ -9,7 +9,7 @@ let rows = 0
 const scale = 0.3
 let picSize = 0
 
-window.onload=carousel()
+window.onload = carousel()
 
 function carousel() {
 
@@ -46,7 +46,7 @@ function positionThumb(image) {
   }
   const rotation = Math.floor(Math.random() * 70 - 35)
 
-let x = Math.floor(Math.max((Math.random() * 50 - 25) + (picSize * columns - 75), 20))
+  let x = Math.floor(Math.max((Math.random() * 50 - 25) + (picSize * columns - 75), 20))
   if (x + picSize * 2 - canvasWidth > 0) {
     console.log('resetting row:' + (x + picSize * 2) + ' > ' + canvasWidth)
     rows++
@@ -54,7 +54,7 @@ let x = Math.floor(Math.max((Math.random() * 50 - 25) + (picSize * columns - 75)
   } else {
     columns++
   }
-   x = Math.floor(Math.max((Math.random() * 50 - 25) + (picSize * columns - 75), 20))
+  x = Math.floor(Math.max((Math.random() * 50 - 25) + (picSize * columns - 75), 20))
   let y = Math.floor(Math.max(Math.random() * 50 - 25 + rows * (picSize - 70), 20))
   image.style = 'width:10px; height:10px; top:5px; left:5px; position:absolute;'
   images.push({
